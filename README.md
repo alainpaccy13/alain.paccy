@@ -1,113 +1,79 @@
-Here's a sample README content file that explains the structure of your database, including the tables, relationships, and examples of SQL commands. You can customize it further as needed.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .gallery-item {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .gallery-item p {
+            padding: 10px;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
 
----
+<h2>Image Gallery</h2>
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="assets/images/1.png" alt="Image 1">
+        <p>Image Description 1</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/300" alt="Image 2">
+        <p>Image Description 2</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/300" alt="Image 3">
+        <p>Image Description 3</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/300" alt="Image 4">
+        <p>Image Description 4</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/300" alt="Image 5">
+        <p>Image Description 5</p>
+    </div>
+    <div class="gallery-item">
+        <img src="https://via.placeholder.com/300" alt="Image 6">
+        <p>Image Description 6</p>
+    </div>
+</div>
 
-# Database Management System
-
-## Overview
-This database management system is designed to handle customer orders, products, and order details. It consists of four primary tables: **Customers**, **Orders**, **Products**, and **OrderDetails**. The database supports operations such as creating, reading, updating, and deleting data, as well as performing joins and subqueries to retrieve related information.
-
-## Tables
-
-### 1. Customers
-- **Description**: Stores customer information.
-- **Columns**:
-  - `CustomerID`: Unique identifier for each customer (Primary Key).
-  - `CustomerName`: Name of the customer.
-  - `Contact`: Contact information of the customer.
-
-### 2. Orders
-- **Description**: Stores order details for each customer.
-- **Columns**:
-  - `OrderID`: Unique identifier for each order (Primary Key).
-  - `CustomerID`: References the customer who placed the order (Foreign Key).
-  - `OrderDate`: Date when the order was placed.
-
-### 3. Products
-- **Description**: Stores information about products available for sale.
-- **Columns**:
-  - `ProductID`: Unique identifier for each product (Primary Key).
-  - `ProductName`: Name of the product.
-  - `Price`: Price of the product.
-
-### 4. OrderDetails
-- **Description**: Stores details about products in each order.
-- **Columns**:
-  - `OrderID`: References the order (Foreign Key).
-  - `ProductID`: References the product (Foreign Key).
-  - `Quantity`: Number of units of the product ordered.
-- **Primary Key**: Combination of `OrderID` and `ProductID`.
-
-## SQL Commands
-
-### Data Definition Language (DDL)
-- **Create Tables**:
-    ```sql
-    CREATE TABLE Customers (...);
-    CREATE TABLE Orders (...);
-    CREATE TABLE Products (...);
-    CREATE TABLE OrderDetails (...);
-    ```
-
-### Data Manipulation Language (DML)
-- **Insert Data**:
-    ```sql
-    INSERT INTO Customers (CustomerID, CustomerName, Contact) VALUES (...);
-    INSERT INTO Orders (OrderID, CustomerID, OrderDate) VALUES (...);
-    INSERT INTO Products (ProductID, ProductName, Price) VALUES (...);
-    INSERT INTO OrderDetails (OrderID, ProductID, Quantity) VALUES (...);
-    ```
-- **Update Data**:
-    ```sql
-    UPDATE Customers SET Contact = 'new_email@example.com' WHERE CustomerID = 1;
-    UPDATE Products SET Price = 899.99 WHERE ProductID = 1;
-    ```
-- **Delete Data**:
-    ```sql
-    DELETE FROM Orders WHERE OrderID = 5;
-    DELETE FROM Customers WHERE CustomerID = 2;
-    ```
-
-### Data Control Language (DCL)
-- **Grant Permissions**:
-    ```sql
-    GRANT SELECT ON Customers TO user_example;
-    ```
-- **Revoke Permissions**:
-    ```sql
-    REVOKE SELECT ON Customers FROM user_example;
-    ```
-
-### Transaction Control Language (TCL)
-- **Commit Changes**:
-    ```sql
-    COMMIT;
-    ```
-- **Rollback Changes**:
-    ```sql
-    ROLLBACK;
-    ```
-
-### Joins and Subqueries
-- **Inner Join**:
-    ```sql
-    SELECT O.OrderID, C.CustomerName, O.OrderDate
-    FROM Orders O
-    INNER JOIN Customers C ON O.CustomerID = C.CustomerID;
-    ```
-- **Subquery**:
-    ```sql
-    SELECT CustomerName
-    FROM Customers
-    WHERE CustomerID IN (SELECT CustomerID FROM Orders);
-    ```
-
-## Usage
-To interact with the database, execute the provided SQL commands in your preferred SQL management tool. Modify the commands as needed to fit your use case.
-
-## License
-This project is licensed under the MIT License.
-
----
-
-Feel free to modify the content to better suit your project's specifics or style!
+</body>
+</html>
