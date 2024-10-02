@@ -8,6 +8,8 @@ This database management system is designed to handle customer orders, products,
 ![Alt text of the image, OPtional](assets/images/Orderdetails.png)
 # image about payment
 ![Alt text of the image, OPtional](assets/images/payment.png)
+# Image about Product 
+![Alt text of the image, OPtional](assets/images/product.png)
 # Image about Customer table contents
 ![Alt text of the image, OPtional](assets/images/ifotooo.png)
 
