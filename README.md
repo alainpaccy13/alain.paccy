@@ -5,7 +5,7 @@ This database management system is designed to handle customer orders, products,
 # Image about Customer table contents
 ![Alt text of the image, OPtional](assets/images/1.png)
 # image about Order detail
-![Alt text of the image, OPtional](assets/images/Order details.png)
+![Alt text of the image, OPtional](assets/images/Orderdetails.png)
 # Image about Customer table contents
 ![Alt text of the image, OPtional](assets/images/ifotooo.png)
 
