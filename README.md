@@ -10,7 +10,7 @@ This database management system is designed to handle customer orders, products,
     CustomerName VARCHAR2(100),
     Contact VARCHAR2(50)
 );
-
+`````
 # Image about Customer table contents
 ![Alt text of the image, OPtional](assets/images/1.png)
 # Image about Order
