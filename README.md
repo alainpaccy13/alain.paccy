@@ -2,6 +2,15 @@
 # Overview 
 
 This database management system is designed to handle customer orders, products, and order details. It consists of four primary tables: Customers, Orders, Products, and OrderDetails. The database supports operations such as creating, reading, updating, and deleting data, as well as performing joins and subqueries to retrieve related information.
+## codes
+## Creation of Table Customer
+```sql
+ CREATE TABLE Customers (
+    CustomerID NUMBER PRIMARY KEY,
+    CustomerName VARCHAR2(100),
+    Contact VARCHAR2(50)
+);
+
 # Image about Customer table contents
 ![Alt text of the image, OPtional](assets/images/1.png)
 # Image about Order
